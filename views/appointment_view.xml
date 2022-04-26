@@ -23,6 +23,25 @@
     </field>
   </record>
 
+  <record id="view_hospital_appointment_activity" model="ir.ui.view">
+    <field name="name">hospital.appointment.activity</field>
+    <field name="model">hospital.appointment</field>
+    <field name="arch" type="xml">
+      <activity string="Appointments">
+        <field name="patient_id"/>
+        <field name="ref"/>
+        <templates>
+          <div t-name="activity-box">
+            <div>
+              <field name="ref" display="full"/>
+            </div>
+          </div>
+        </templates>
+
+      </activity>
+    </field>
+  </record>
+
   <record id="view_hospital_appointment_form" model="ir.ui.view">
     <field name="name">hospital.appointment.form</field>
     <field name="model">hospital.appointment</field>
@@ -103,7 +122,7 @@
     <field name="name">Appointments</field>
     <field name="type">ir.actions.act_window</field>
     <field name="res_model">hospital.appointment</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,activity</field>
     <field name="context">{}</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">
