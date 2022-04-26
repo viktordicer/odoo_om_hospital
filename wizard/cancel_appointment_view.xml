@@ -13,6 +13,10 @@
             <group>
             </group>
           </group>
+          <footer>
+            <button name="action_cancel" string="Cancel Appointment" type="object" class="btn-primary" data-hotkey="q"/>
+            <button special="cancel" data-hotkey="z" string="Discard" calss="btn-secondary"/>
+          </footer>
       </form>
     </field>
   </record>
