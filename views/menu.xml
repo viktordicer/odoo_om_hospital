@@ -25,5 +25,12 @@
     parent="hospital_root_menu"
     sequence="20"/>
 
+  <menuitem
+    id="cancel_appointment_menu"
+    name="Cancellation"
+    parent="appointment_master_menu"
+    action="action_cancel_appointment"
+    sequence="20"/>
+
 
 </odoo>
