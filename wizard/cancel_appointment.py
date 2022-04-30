@@ -16,4 +16,5 @@ class CancelAppointmentWizard(models.TransientModel):
   def default_get(self, fields):
     res = super(CancelAppointmentWizard, self).default_get(fields)
     res['date_cancel'] = datetime.date.today()
+    res['appointment_id'] = self.env.context.get('active_id')
     return res
