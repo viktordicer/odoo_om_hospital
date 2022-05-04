@@ -42,3 +42,13 @@ class HospitalPatient(models.Model):
         
   def name_get(self):
     return [(rec.id, "[%s] %s" % (rec.ref, rec.name)) for rec in self]
+  
+  def action_open_appointments(self):
+    return {
+      'type': 'ir.actions.act_window',
+      'name' : 'Appointments',
+      'res_model' : 'hospital.appointment',
+      'domain' : [('patient_id', '=', self.id)],
+      'view_mode' : 'tree',
+      'target' : 'current', 
+    }
